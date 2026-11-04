@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="John Repairing: expert laptop and desktop repair, data recovery and upgrades with written quotes and a 90-day warranty.">
+<title>John Repairing — Computer & Laptop Repair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f2ee;--surface:#fff;--ink:#0b1220;--muted:#5b6475;--line:#ddd9d2;--accent:#ff8a3d;--accent-ink:#1d1002;--blue:#3a63ff;--mint:#1fb584;--price:#b4510c;
+  --g:#0a101b;--g2:#101a2b;--gline:rgba(255,255,255,.1);--gmuted:#93a0b6;--ac2:#8aa8ff;
+  --f:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--ease:cubic-bezier(.22,.7,.2,1);
+  --pad:clamp(72px,10vw,128px);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090d14;--surface:#101722;--ink:#ece9e3;--muted:#8f98a8;--line:#222b3a;--accent:#ff9a55;--accent-ink:#1d1002;--blue:#6f90ff;--mint:#3ddc9f;--price:#ffa561}}
+:root[data-theme="dark"]{--bg:#090d14;--surface:#101722;--ink:#ece9e3;--muted:#8f98a8;--line:#222b3a;--accent:#ff9a55;--accent-ink:#1d1002;--blue:#6f90ff;--mint:#3ddc9f;--price:#ffa561}
+html{scroll-padding-top:88px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.65 var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.03em;line-height:1.08}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;background:#fff;color:#000;padding:10px 14px;border-radius:4px;z-index:50}.skip:focus{top:12px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.btn{display:inline-block;font:600 .98rem var(--f);padding:15px 28px;border-radius:6px;background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px var(--accent)}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.btn.line:hover{box-shadow:inset 0 0 0 1px #fff}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:40;background:linear-gradient(90deg,var(--blue),var(--accent));transform-origin:0 50%;transform:scaleX(var(--sp,0))}
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(10,16,27,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--gline)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;color:#fff}
+.logo{display:flex;align-items:center;gap:12px;font-size:1.15rem;font-weight:600;letter-spacing:-.02em;text-decoration:none}
+.logo svg{width:36px;height:36px;flex:none}
+
+.logo span{font-weight:400;opacity:.65}
+.links{display:flex;gap:34px;align-items:center;font-size:.96rem}
+.links a:not(.btn){text-decoration:none;color:#c3cbd8;position:relative;transition:color .25s}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .35s var(--ease)}
+.links a:not(.btn):hover{color:#fff}.links a:not(.btn):hover::after{transform:scaleX(1)}
+.links .btn{padding:10px 20px}
+.menu{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer;position:relative}
+.menu i,.menu i::before{position:absolute;left:11px;width:22px;height:1.5px;background:currentColor;transition:transform .35s var(--ease)}
+.menu i{top:21px}.menu i::before{content:"";left:0;top:-7px}
+.menu[aria-expanded="true"] i{transform:rotate(45deg)}.menu[aria-expanded="true"] i::before{transform:translateY(7px) rotate(-90deg)}
+/* hero */
+.hero{background:var(--g);color:#fff;position:relative;overflow:hidden;padding:170px 0 0}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 78% 30%,rgba(43,89,255,.30),transparent 70%),radial-gradient(42% 42% at 6% 95%,rgba(255,138,61,.15),transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;min-height:560px}
+.hero h1{font-size:clamp(2.75rem,6vw,5.3rem);font-weight:500;letter-spacing:-.045em;line-height:1.02}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 b{display:block;font-weight:inherit;transform:translateY(105%);animation:up 1.1s var(--ease) forwards}
+.hero h1 span:nth-child(2) b{animation-delay:.12s;color:#9fb0cc}
+.hero h1 span:nth-child(3) b{animation-delay:.24s;color:#9fb0cc}
+@keyframes up{to{transform:none}}
+.lede{max-width:44ch;font-size:1.2rem;color:var(--gmuted);margin:28px 0 38px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.lede,.cta{opacity:0;animation:fade 1.1s var(--ease) .6s forwards}.cta{animation-delay:.75s}
+@keyframes fade{to{opacity:1}}
+.visual{position:relative}
+.board{width:100%;height:auto;display:block;overflow:visible}
+.board path{fill:none;stroke:#34425c;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.board .t{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s var(--ease) forwards;animation-delay:calc(var(--d,0)*1s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.board .pad{fill:var(--g);stroke:#5d6e8c;stroke-width:1.4;opacity:0;animation:fade .6s forwards;animation-delay:calc(var(--d,0)*1s + 1.7s)}
+.board .chip{fill:#0e1624;stroke:#8fa6cc;stroke-width:1.4;opacity:0;animation:fade 1.2s .3s forwards}
+.board .chip2{stroke:#34425c;fill:none;stroke-width:1}.board .jr{font:600 44px var(--f);fill:#fff;letter-spacing:2px;opacity:0;animation:fade 1.2s .9s forwards}
+.board .pulse{stroke:var(--accent);stroke-width:2.2;stroke-dasharray:.07 .93;opacity:0;animation:fade .5s 2.4s forwards,run 3.8s 2.4s linear infinite}
+@keyframes run{to{stroke-dashoffset:-1}}
+.facts{position:relative;margin-top:84px;border-top:1px solid var(--gline);display:grid;grid-template-columns:repeat(3,1fr)}
+.facts div{padding:28px 28px 32px 0;font-weight:500}
+.facts div+div{padding-left:28px;border-left:1px solid var(--gline)}
+.facts span{display:block;color:var(--gmuted);font-weight:400;font-size:.97rem;margin-top:2px}.facts div::before{content:"";display:block;width:24px;height:3px;border-radius:2px;background:var(--blue);margin-bottom:14px}.facts div:nth-child(2)::before{background:var(--accent)}.facts div:nth-child(3)::before{background:var(--mint)}
+/* brands */
+.brands{border-bottom:1px solid var(--line);overflow:hidden;padding:30px 0;display:flex;align-items:center;gap:36px}
+.brands p{flex:none;padding-left:max(28px,calc((100vw - 1180px)/2 + 28px));font-size:.92rem;color:var(--muted);max-width:230px}
+.mq{display:flex;gap:64px;width:max-content;padding-right:64px;animation:mq 38s linear infinite;font-size:1.5rem;font-weight:600;letter-spacing:-.03em;color:var(--muted);opacity:.7}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mqwrap{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+/* stats */
+.stats{padding:72px 0;border-bottom:1px solid var(--line)}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stats li{padding-right:20px}.stats li+li{padding-left:28px;border-left:1px solid var(--line)}
+.stats strong{display:block;font-size:clamp(2.4rem,4.4vw,3.6rem);font-weight:500;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stats span{display:block;font-size:.98rem;color:var(--muted);margin-top:12px;line-height:1.4}
+/* sections */
+section{padding:var(--pad) 0}
+h2{font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:500;letter-spacing:-.04em}
+.sub{color:var(--muted);max-width:42ch;margin-top:18px;font-size:1.12rem}
+.svc{display:grid;grid-template-columns:.8fr 1.4fr;gap:72px;align-items:start}
+.svc .head{position:sticky;top:112px}
+.rows{border-top:1px solid var(--line)}
+.r{position:relative;display:grid;grid-template-columns:1fr 1.5fr auto;gap:28px;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--line)}
+.r::before{content:"";position:absolute;inset:0 -20px;background:var(--surface);border-radius:8px;opacity:0;transform:scale(.985);transition:opacity .4s var(--ease),transform .4s var(--ease);z-index:-1}
+.r:hover::before{opacity:1;transform:none}
+.r h3{font-size:1.28rem;font-weight:600;letter-spacing:-.02em;transition:transform .4s var(--ease)}
+.r:hover h3{transform:translateX(4px)}
+.r p{color:var(--muted);font-size:1.02rem}.r b{font-weight:600;white-space:nowrap;color:var(--price)}
+.rows{isolation:isolate}
+/* finder */
+.finder{background:#0c2430;color:#fff;position:relative;overflow:hidden}
+.finder::before{content:"";position:absolute;inset:0;background:radial-gradient(45% 55% at 100% 0%,rgba(31,181,132,.22),transparent 70%),radial-gradient(35% 45% at 0% 100%,rgba(255,138,61,.1),transparent 70%)}
+.finder .wrap{position:relative}
+.finder .sub{color:var(--gmuted)}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-top:48px;border-bottom:1px solid var(--gline)}
+.tab{font:500 1rem var(--f);background:none;color:var(--gmuted);border:0;padding:15px 20px;cursor:pointer;position:relative;transition:color .25s}
+.tab:hover,.tab[aria-pressed="true"]{color:#fff}
+.tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .45s var(--ease)}
+.tab[aria-pressed="true"]::after{transform:scaleX(1)}
+.res{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;padding-top:52px;min-height:260px}
+.res h3{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:500;margin-bottom:16px}
+.res p{color:var(--gmuted);max-width:46ch;font-size:1.1rem}
+.res dl{margin:0;display:grid;gap:22px;align-content:start}
+.res dt{color:var(--gmuted);font-size:.95rem}
+.res dd{margin:2px 0 0;font-size:1.8rem;font-weight:500;letter-spacing:-.03em;padding-bottom:20px;border-bottom:1px solid var(--gline)}
+.swap{animation:sw .6s var(--ease)}@keyframes sw{from{opacity:0;transform:translateY(10px)}}
+/* process */
+.track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:72px;padding-top:38px}
+.track::before,.track::after{content:"";position:absolute;top:0;left:0;height:2px}
+.track::before{right:0;background:var(--line)}
+.track::after{width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.step{position:relative;opacity:.4;transition:opacity .6s var(--ease)}
+.step.on{opacity:1}
+.step::before{content:"";position:absolute;top:-44px;left:0;width:12px;height:12px;background:var(--bg);border:2px solid var(--line);border-radius:50%;transition:all .5s var(--ease)}
+.step.on::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 18%,transparent)}
+.step h3{font-size:1.2rem;margin-bottom:8px;letter-spacing:-.02em}
+.step p{color:var(--muted);font-size:1.02rem}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start}
+.hours{width:100%;border-collapse:collapse;margin:38px 0 28px}
+.hours td{padding:16px 0;border-bottom:1px solid var(--line)}.hours tr:first-child td{border-top:1px solid var(--line)}.hours td:last-child{text-align:right;font-weight:500}
+form{background:var(--surface);border:1px solid var(--line);padding:42px;border-radius:12px;box-shadow:0 40px 80px -50px rgba(11,18,32,.45)}
+form h3{font-size:1.5rem;font-weight:500;margin-bottom:28px}
+label{display:block;font-size:.92rem;font-weight:500;margin-bottom:22px}
+input,select,textarea{display:block;width:100%;margin-top:8px;font:400 1.05rem var(--f);padding:12px 0;background:transparent;color:var(--ink);border:0;border-bottom:1px solid var(--line);border-radius:0;transition:border-color .3s}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+select option{color:#0b1220}textarea{min-height:84px;resize:vertical}
+form .btn{width:100%;margin-top:6px}
+.ok{display:none;margin-top:16px;font-weight:500;color:var(--price)}
+footer{background:var(--g);color:var(--gmuted);padding:34px 0 40px;font-size:.96rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:920px){
+  .hero{padding-top:118px}.hero .wrap,.svc,.contact,.res{grid-template-columns:1fr;gap:40px}.hero .wrap{min-height:0}
+  .visual{max-width:480px;margin:0 auto;width:100%}.panel{left:0;bottom:-8%}.svc .head{position:static}
+  .stats ul{grid-template-columns:1fr 1fr;row-gap:40px}.stats li:nth-child(3){padding-left:0;border-left:0}
+  .track{grid-template-columns:1fr 1fr;row-gap:52px}.facts{margin-top:64px}
+  .brands{flex-direction:column;align-items:flex-start;gap:16px}.brands p{padding-left:28px}.mqwrap{width:100%}
+  .menu{display:block}
+  .links{position:fixed;inset:76px 0 auto 0;background:var(--g);flex-direction:column;align-items:stretch;gap:0;padding:8px 28px 24px;border-bottom:1px solid var(--gline);transform:translateY(-12px);opacity:0;visibility:hidden;transition:all .4s var(--ease)}
+  .links.open{transform:none;opacity:1;visibility:visible}
+  .links a:not(.btn){padding:16px 0;border-bottom:1px solid var(--gline);font-size:1.1rem}.links a:not(.btn)::after{display:none}.links .btn{margin-top:18px;text-align:center}
+  .r{grid-template-columns:1fr auto;gap:6px 20px}.r p{grid-column:1/-1;grid-row:2}.r::before{inset:0 -12px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 20px}.facts{grid-template-columns:1fr}.facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--gline)}
+  .track{grid-template-columns:1fr;padding:0 0 0 38px;margin-top:44px;gap:36px}
+  .track::before,.track::after{width:2px;height:100%;top:0;right:auto}.track::after{transform-origin:50% 0;transform:scaleY(var(--p,0))}
+  .step::before{top:6px;left:-43px}form{padding:28px 22px}.cta .btn{flex:1;text-align:center}.panel{width:86%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv,.lede,.cta,.board .pad,.board .chip,.board .jr,.panel{opacity:1;transform:none}.hero h1 b{transform:none}.board .t{stroke-dashoffset:0}.board .pulse{opacity:0}.m u::after{width:var(--w)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#services">Skip to content</a>
+<div class="progress" id="progress"></div>
+<header class="top" id="top"><div class="wrap nav">
+  <a class="logo" href="#home" aria-label="John Repairing home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9" fill="#12203a" stroke="rgba(255,255,255,.22)"/><path d="M19.5 8.5V19a5 5 0 01-5 5H10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="19.5" cy="8.5" r="2.6" fill="#ff8a3d"/><circle cx="9.5" cy="24" r="2" fill="#12203a" stroke="#4fd1a8" stroke-width="1.6"/></svg><div>John <span>Repairing</span></div></a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="links" aria-label="Menu"><i></i></button>
+  <nav class="links" id="links" aria-label="Main"><a href="#services">Services</a><a href="#finder">Diagnose</a><a href="#process">Process</a><a href="#contact">Contact</a><a class="btn" href="tel:+15550142">Call (555) 0142</a></nav>
+</div></header>
+
+<main id="home">
+<div class="hero"><div class="wrap">
+  <div>
+    <h1><span><b>Computer repair,</b></span><span><b>handled with</b></span><span><b>precision.</b></span></h1>
+    <p class="lede">Diagnosis, repair and data recovery for laptops and desktops. You receive a written quote before any work begins.</p>
+    <div class="cta"><a class="btn" href="#contact">Request a quote</a><a class="btn line" href="#services">View services</a></div>
+  </div>
+  <div class="visual" data-par=".06">
+    <svg class="board" viewBox="0 0 600 520" role="img" aria-label="Line drawing of a circuit board">
+      <path class="t" pathLength="1" style="--d:.2" d="M230 220H150L120 190H40"/>
+      <path class="t" pathLength="1" style="--d:.35" d="M230 250H110L80 280H20"/>
+      <path class="t" pathLength="1" style="--d:.5" d="M230 280H170L140 310V400H60"/>
+      <path class="t" pathLength="1" style="--d:.3" d="M370 220H450L480 190H580"/>
+      <path class="t" pathLength="1" style="--d:.45" d="M370 250H500L530 280H590"/>
+      <path class="t" pathLength="1" style="--d:.6" d="M370 280H430L460 310V420H540"/>
+      <path class="t" pathLength="1" style="--d:.25" d="M260 190V120L290 90H400"/>
+      <path class="t" pathLength="1" style="--d:.4" d="M300 190V40"/>
+      <path class="t" pathLength="1" style="--d:.55" d="M340 190V140L370 110V30"/>
+      <path class="t" pathLength="1" style="--d:.3" d="M260 330V400L230 430H120"/>
+      <path class="t" pathLength="1" style="--d:.45" d="M300 330V500"/>
+      <path class="t" pathLength="1" style="--d:.6" d="M340 330V380L370 410H460"/>
+      <path class="pulse" pathLength="1" d="M370 250H500L530 280H590"/>
+      <circle class="pad" style="--d:.2" cx="40" cy="190" r="5"/><circle class="pad" style="--d:.35" cx="20" cy="280" r="5"/><circle class="pad" style="--d:.5" cx="60" cy="400" r="5"/>
+      <circle class="pad" style="--d:.3" cx="580" cy="190" r="5"/><circle class="pad" style="--d:.45" cx="590" cy="280" r="5"/><circle class="pad" style="--d:.6" cx="540" cy="420" r="5"/>
+      <circle class="pad" style="--d:.25" cx="400" cy="90" r="5"/><circle class="pad" style="--d:.4" cx="300" cy="40" r="5"/><circle class="pad" style="--d:.55" cx="370" cy="30" r="5"/>
+      <circle class="pad" style="--d:.3" cx="120" cy="430" r="5"/><circle class="pad" style="--d:.45" cx="300" cy="500" r="5"/><circle class="pad" style="--d:.6" cx="460" cy="410" r="5"/>
+      <rect class="chip" x="230" y="190" width="140" height="140" rx="8"/><rect class="chip2" x="246" y="206" width="108" height="108" rx="4"/><text class="jr" x="300" y="260" text-anchor="middle" dominant-baseline="central">JR</text>
+    </svg>
+  </div>
+</div>
+<div class="wrap"><div class="facts">
+  <div>Free diagnosis<span>No charge to find the fault.</span></div>
+  <div>90-day warranty<span>On every repair and part fitted.</span></div>
+  <div>Written quote first<span>Nothing starts without your approval.</span></div>
+</div></div></div>
+
+<div class="brands"><p>We repair all major brands</p><div class="mqwrap"><div class="mq" aria-hidden="true">
+  <span>Apple</span><span>Dell</span><span>HP</span><span>Lenovo</span><span>ASUS</span><span>Acer</span><span>Microsoft</span><span>MSI</span><span>Samsung</span>
+  <span>Apple</span><span>Dell</span><span>HP</span><span>Lenovo</span><span>ASUS</span><span>Acer</span><span>Microsoft</span><span>MSI</span><span>Samsung</span>
+</div></div></div>
+
+<div class="stats"><div class="wrap"><ul>
+  <li><strong class="n" data-to="10" data-s="+">0</strong><span>Years of bench experience</span></li>
+  <li><strong class="n" data-to="3500" data-s="+">0</strong><span>Devices repaired</span></li>
+  <li><strong class="n" data-to="90" data-s="">0</strong><span>Day warranty on all repairs</span></li>
+  <li><strong class="n" data-to="24" data-s="h">0</strong><span>Typical turnaround</span></li>
+</ul></div></div>
+
+<section id="services"><div class="wrap svc">
+  <div class="head rv"><h2>Services</h2><p class="sub">For homes, students and small offices. If it has a power button, bring it in.</p></div>
+  <div class="rows">
+    <div class="r rv"><h3>Screen and hardware repair</h3><p>Cracked screens, keyboards, hinges, batteries and charging ports.</p><b>From $89</b></div>
+    <div class="r rv"><h3>Performance and upgrades</h3><p>Clean-ups, SSD and memory upgrades, fresh system installs.</p><b>From $49</b></div>
+    <div class="r rv"><h3>Virus and security</h3><p>Malware removal and proper protection so problems stay gone.</p><b>From $59</b></div>
+    <div class="r rv"><h3>Data recovery</h3><p>Files from failing drives, water damage and accidental deletion.</p><b>From $99</b></div>
+    <div class="r rv"><h3>Custom and gaming PCs</h3><p>Builds, upgrades, cooling fixes and tuning.</p><b>From $49</b></div>
+    <div class="r rv"><h3>Setup and networking</h3><p>New device setup, printers, Wi-Fi and data transfer.</p><b>From $39</b></div>
+  </div>
+</div></section>
+
+<section class="finder" id="finder"><div class="wrap">
+  <h2 class="rv">What’s the problem?</h2>
+  <p class="sub rv">Choose the closest symptom for the likely fix, price and wait time.</p>
+  <div class="tabs rv" id="tabs" role="group" aria-label="Symptoms"></div>
+  <div class="res" id="res" aria-live="polite"></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <h2 class="rv">How a repair works</h2>
+  <p class="sub rv">You always know where your device is and what it will cost.</p>
+  <div class="track" id="track">
+    <div class="step"><h3>Drop it off</h3><p>Walk in or book a time and tell us what happened.</p></div>
+    <div class="step"><h3>We diagnose</h3><p>A free check on the bench, usually within hours.</p></div>
+    <div class="step"><h3>You approve</h3><p>A written price. Nothing is touched until you agree.</p></div>
+    <div class="step"><h3>Pick it up</h3><p>We message you when it’s ready and show you the fix.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap contact">
+  <div class="rv">
+    <h2>Visit the shop</h2>
+    <table class="hours"><caption style="position:absolute;left:-9999px">Opening hours</caption>
+      <tr><td>Monday to Friday</td><td>10:00 am – 7:00 pm</td></tr>
+      <tr><td>Saturday</td><td>11:00 am – 5:00 pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+    <p>12 Example Street, Your City<br>Phone: <a href="tel:+15550142">(555) 0142</a><br>Email: <a href="mailto:hello@johnrepairing.example">hello@johnrepairing.example</a></p>
+  </div>
+  <form class="rv" onsubmit="return false" style="--i:1">
+    <h3>Request a quote</h3>
+    <label>Name<input id="n" type="text" autocomplete="name"></label>
+    <label>Phone or email<input id="c" type="text" autocomplete="tel"></label>
+    <label>Device<select><option>Windows laptop</option><option>MacBook</option><option>Desktop PC</option><option>Gaming PC</option><option>Other</option></select></label>
+    <label>What’s wrong?<textarea></textarea></label>
+    <button class="btn" type="button" id="send">Send request</button>
+    <p class="ok" id="ok" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 John Repairing. Demo website.</span><span>Prices and details are sample content.</span></div></footer>
+
+<script>
+var items=[
+ ["Won’t turn on","Power and motherboard diagnosis","We test the charger, battery and board to find the real fault, then quote the repair.","$45–$120","1–3 days"],
+ ["Slow or freezing","Tune-up and SSD upgrade","We clear startup clutter, check the drive and fit an SSD when it will help.","$49–$149","Same day"],
+ ["Cracked screen","Screen replacement","We match your exact model, fit the panel and test touch, colour and brightness.","$89–$249","1–2 days"],
+ ["Virus or pop-ups","Malware removal","A full scan and clean-up, then updates and protection so it doesn’t return.","$59","Same day"],
+ ["Overheating","Cooling service","Dust cleared, fresh thermal paste applied and a heat test under load.","$49","Same day"],
+ ["Lost files","Data recovery","We assess the drive first and tell you the odds before any recovery charge.","From $99","2–5 days"]
+];
+var $=function(id){return document.getElementById(id)},tabs=$("tabs"),res=$("res");
+function show(i){
+  [].forEach.call(tabs.children,function(b,k){b.setAttribute("aria-pressed",k===i)});
+  var t=items[i];
+  res.innerHTML="<div class='swap'><h3>"+t[1]+"</h3><p>"+t[2]+"</p></div><dl class='swap'><div><dt>Typical price</dt><dd>"+t[3]+"</dd></div><div><dt>Typical wait</dt><dd>"+t[4]+"</dd></div></dl>";
+}
+items.forEach(function(t,i){var b=document.createElement("button");b.className="tab";b.type="button";b.textContent=t[0];b.setAttribute("aria-pressed","false");b.onclick=function(){show(i)};tabs.appendChild(b)});
+show(0);
+$("send").onclick=function(){
+  var n=$("n").value.trim(),c=$("c").value.trim(),o=$("ok");o.style.display="block";
+  o.textContent=(n&&c)?"Thank you, "+n+". This is a demo, so nothing was sent, but a live form would reach John today.":"Please add your name and a phone or email.";
+};
+var menu=$("menu"),links=$("links");
+function closeMenu(){links.classList.remove("open");menu.setAttribute("aria-expanded","false")}
+menu.onclick=function(){var o=links.classList.toggle("open");menu.setAttribute("aria-expanded",o)};
+links.addEventListener("click",function(e){if(e.target.tagName==="A")closeMenu()});
+var topbar=$("top"),track=$("track"),steps=track.querySelectorAll(".step"),par=document.querySelectorAll("[data-par]"),prog=$("progress"),ticking=false;
+var still=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function frame(){
+  ticking=false;var y=window.scrollY,vh=window.innerHeight;
+  topbar.classList.toggle("solid",y>40);
+  var max=document.documentElement.scrollHeight-vh;prog.style.setProperty("--sp",max>0?(y/max).toFixed(4):0);
+  var r=track.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh*.75-r.top)/(r.height+vh*.2)));
+  track.style.setProperty("--p",p.toFixed(3));
+  steps.forEach(function(s,i){s.classList.toggle("on",p>0&&p>=i/steps.length)});
+  if(!still&&y<1000)par.forEach(function(el){el.style.transform="translate3d(0,"+(y*el.dataset.par*-1).toFixed(1)+"px,0)"});
+}
+window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});frame();
+function count(el){
+  var to=+el.dataset.to,s=el.dataset.s||"",t0=null;
+  if(still){el.textContent=to.toLocaleString()+s;return}
+  requestAnimationFrame(function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1800),e=1-Math.pow(1-k,4);el.textContent=Math.round(to*e).toLocaleString()+s;if(k<1)requestAnimationFrame(f)});
+}
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".rv").forEach(function(el,i){io.observe(el)});
+  var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);io2.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll(".n").forEach(function(el){io2.observe(el)});
+}else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")});document.querySelectorAll(".n").forEach(count)}
+</script>
+</body>
+</html>
